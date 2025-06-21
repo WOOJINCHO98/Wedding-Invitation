@@ -1,0 +1,63 @@
+@import "tailwindcss";
+/* 모바일 환경에서 스크롤바를 숨기기 위한 CSS */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@font-face {
+  font-family: "Gotham-Bold";
+  font-weight: normal;
+  src: url("./fonts/Gotham/Gotham-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  font-weight: normal;
+  src: url("./fonts/SpoqaHanSansNeo_TTF_original/SpoqaHanSansNeo-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SpoqaHanSansNeo-Light";
+  font-weight: normal;
+  src: url("./fonts/SpoqaHanSansNeo_TTF_original/SpoqaHanSansNeo-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SpoqaHanSansNeo-Bold";
+  font-weight: normal;
+  src: url("./fonts/SpoqaHanSansNeo_TTF_original/SpoqaHanSansNeo-Bold.ttf") format("truetype");
+}
+
+body {
+  font-family: "SpoqaHanSansNeo-Regular", sans-serif;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* 텍스트가 아래에서 위로 올라오도록 초기 위치 설정 */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1.6s ease-out forwards;
+}
+
+
+.text-animation {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Initially moved down */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition for non-animated state */
+}
+
+.text-animation.is-visible {
+  animation: fadeInUp 0.8s forwards; /* Apply animation when visible */
+}
