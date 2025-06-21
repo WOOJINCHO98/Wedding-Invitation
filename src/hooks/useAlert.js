@@ -1,5 +1,3 @@
-// src/hooks/useAlert.js
-
 import { useState } from "react";
 
 const useAlert = () => {

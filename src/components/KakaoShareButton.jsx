@@ -71,7 +71,7 @@ const KakaoShareButton = ({
     } else {
       if (alertMessage) {
         alertMessage(
-          "카카오톡 공유 기능을 사용할 수 없다. 잠시 후 다시 시도해달라."
+          "카카오톡 공유 기능을 사용할 수 없습니다. 잠시 후 다시 시도해주세요."
         );
       }
       console.error("Kakao Share SDK is not ready.");
