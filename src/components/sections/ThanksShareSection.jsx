@@ -67,7 +67,7 @@ const ThanksShareSection = ({ alertMessage }) => {
           kakaoApiKey={KAKAO_API_KEY}
           title="기준, 다예의 결혼식에 초대합니다."
           description="2025. 9. 7 일요일 오후 12시 30분, 더채플앳청담 3층 커티지홀"
-          imageUrl={"https://resonant-pasca-d83691.netlify.app/title_image.png"}
+          imageUrl={"https://mobile-wedding-inv.netlify.app/title_image.png"}
           webUrl={window.location.href}
           mobileWebUrl={window.location.href}
           buttonTitle="청첩장 보러가기"
