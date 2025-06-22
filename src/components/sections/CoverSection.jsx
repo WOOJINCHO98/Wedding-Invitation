@@ -77,7 +77,7 @@ const CoverSection = () => {
           }`}
         >
           <p
-            className="text-2xl sm:text-xl font-medium mb-1 whitespace-nowrap"
+            className="text-2xl sm:text-3xl font-medium mb-1 whitespace-nowrap"
             style={{ fontFamily: FONT_FAMILIES.SD_MOVE_IT }}
           >
             <span className="text-white">{WEDDING_INFO.DATE} </span>
