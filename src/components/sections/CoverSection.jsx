@@ -75,6 +75,7 @@ const CoverSection = () => {
           className={`w-full text-center ${
             isWeddingInfoVisible ? "animate-fade-in-up" : "opacity-0"
           }`}
+          style={{ fontFamily: FONT_FAMILIES.SD_MOVE_IT, color: COLORS.PINK }}
         >
           <p className="text-lg sm:text-xl font-medium mb-1 whitespace-nowrap">
             <span className="text-white">{WEDDING_INFO.DATE} </span>
