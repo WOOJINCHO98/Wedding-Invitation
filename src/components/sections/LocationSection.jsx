@@ -44,7 +44,7 @@ const LocationSection = ({ alertMessage }) => {
       <button
         onClick={handleCopyAddress}
         style={{ fontFamily: FONT_FAMILIES.SPOQA_BOLD }}
-        className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 rounded-lg shadow-md text-xs mb-12 transition duration-300 ease-in-out whitespace-nowrap"
+        className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 rounded-lg text-xs mb-12 transition duration-300 ease-in-out whitespace-nowrap"
       >
         주소 복사하기
       </button>
@@ -61,7 +61,7 @@ const LocationSection = ({ alertMessage }) => {
       >
         <button
           onClick={() => window.open(EXTERNAL_URLS.NAVER_MAP, "_blank")}
-          className="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-3 rounded-lg shadow-md text-xs transition duration-300 ease-in-out whitespace-nowrap"
+          className="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-3 rounded-lg text-xs transition duration-300 ease-in-out whitespace-nowrap"
         >
           네이버 지도
         </button>
@@ -74,7 +74,7 @@ const LocationSection = ({ alertMessage }) => {
         />
         <button
           onClick={() => window.open(EXTERNAL_URLS.TMAP, "_blank")}
-          className="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-3 rounded-lg shadow-md text-xs transition duration-300 ease-in-out whitespace-nowrap"
+          className="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-3 rounded-lg text-xs transition duration-300 ease-in-out whitespace-nowrap"
         >
           티맵
         </button>

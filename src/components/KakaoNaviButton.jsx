@@ -56,7 +56,7 @@ const KakaoNaviButton = ({
           startNavigation();
           console.log("카카오 내비게이션 시작");
         }}
-        className="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-3 rounded-lg shadow-md text-base text-xs transition duration-300 ease-in-out whitespace-nowrap"
+        className="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-3 rounded-lg text-base text-xs transition duration-300 ease-in-out whitespace-nowrap"
       >
         카카오 내비
       </button>

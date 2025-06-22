@@ -35,7 +35,7 @@ export const WEDDING_INFO = {
 
 // 스타일 상수
 export const COLORS = {
-  DARK_GREEN: "#131F05",
+  DARK_GREEN: "#1F3C28",
   PINK: "#FB87B1",
   LIGHT_GRAY: "#7878801F", // 계좌 섹션 배경색
   TRANSPARENT_BLACK: "#FFFFFF08", // 링크 복사 버튼 배경색

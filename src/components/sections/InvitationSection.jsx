@@ -45,10 +45,10 @@ const InvitationSection = () => {
       style={{ backgroundColor: COLORS.DARK_GREEN }}
     >
       <h2 className="text-2xl font-bold mb-10 whitespace-nowrap">
-        저희의 결혼식에 초대합니다.
+        저희의 결혼식에 초대합니다
       </h2>
       <p
-        className="text-sm leading-relaxed space-y-4 opacity-60"
+        className="text-base leading-relaxed space-y-4 opacity-70"
         style={{ fontFamily: FONT_FAMILIES.SPOQA_LIGHT }}
       >
         {invitationLines.map((line, index) => (

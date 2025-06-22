@@ -1,6 +1,8 @@
 import React from "react";
 import Name1 from "../../assets/name1.svg";
 import Name2 from "../../assets/name2.svg";
+import Ampersand from "../../assets/ampersand.svg";
+
 import {
   IMAGE_PATHS,
   COLORS,
@@ -15,11 +17,11 @@ const CoverSection = () => {
   }); // 훅 사용
 
   return (
-    <section className="relative w-full h-210 text-white overflow-hidden scroll-snap-align-start flex-shrink-0">
+    <section className="relative w-full h-160 text-white overflow-hidden scroll-snap-align-start flex-shrink-0">
       <img
         src={IMAGE_PATHS.COVER}
         alt="Wedding Couple"
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute inset-0 w-screen object-cover z-0"
         onError={(e) => {
           e.target.onerror = null;
           e.target.src =
@@ -47,7 +49,7 @@ const CoverSection = () => {
           <img
             src={Name1}
             alt="Gijun"
-            className="absolute left-14 top-25 w-28"
+            className="absolute left-15 top-25 w-28"
             onError={(e) => {
               e.target.onerror = null;
               e.target.src =
@@ -55,9 +57,18 @@ const CoverSection = () => {
             }}
           />
           <img
+            src={Ampersand}
+            alt="Ampersand"
+            className="absolute top-42 w-20"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = "https://placehold.co/50x50/cccccc/333333?text=+";
+            }}
+          />
+          <img
             src={Name2}
             alt="Daye"
-            className="absolute right-14 top-52 w-28"
+            className="absolute right-15 top-52 w-28"
             onError={(e) => {
               e.target.onerror = null;
               e.target.src =

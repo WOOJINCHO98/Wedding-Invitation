@@ -31,7 +31,7 @@ const GroomSection = () => {
         </div>
 
         <div
-          className="relative w-full shadow-lg mb-5 flex-grow"
+          className="relative w-full mb-5 flex-grow"
           style={{ minHeight: "300px" }}
         >
           <img
