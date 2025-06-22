@@ -61,3 +61,17 @@ body {
 .text-animation.is-visible {
   animation: fadeInUp 0.8s forwards; /* Apply animation when visible */
 }
+
+/* Ampersand SVG에 적용될 애니메이션 */
+.ampersand-drawing {
+  stroke-dasharray: 1000; /* SVG 경로의 총 길이에 따라 조절 */
+  stroke-dashoffset: 1000; /* 초기에는 완전히 숨김 */
+  animation: drawAmpersand 8s ease-in forwards; /* 2초 동안 애니메이션 재생, 최종 상태 유지 */
+  animation-delay: 0.5s; /* 필요에 따라 애니메이션 시작 전 지연 시간 추가 */
+}
+
+@keyframes drawAmpersand {
+  to {
+    stroke-dashoffset: 0; /* 경로가 완전히 그려지도록 오프셋을 0으로 만듦 */
+  }
+}
