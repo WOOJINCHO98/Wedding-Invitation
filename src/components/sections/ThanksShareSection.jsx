@@ -67,7 +67,7 @@ const ThanksShareSection = ({ alertMessage }) => {
           kakaoApiKey={KAKAO_API_KEY}
           title="염기준🩵조다예 결혼합니다"
           description="9월 7일 (일) 오후 12:30 더채플앳청담 3층, 커티지홀"
-          imageUrl={"https://mobile-wedding-inv.netlify.app/title_image.png"}
+          imageUrl={"https://mobile-wedding-inv.netlify.app/meta_image2x2.png"}
           webUrl={window.location.href}
           mobileWebUrl={window.location.href}
           buttonTitle="청첩장 보러가기"
