@@ -1,7 +1,5 @@
-// src/components/sections/GroomSection.jsx
-
 import React from "react";
-import { IMAGE_PATHS, COLORS } from "../../constants";
+import { IMAGE_PATHS, COLORS, FONT_FAMILIES } from "../../constants";
 import useInViewAnimation from "../../hooks/useInViewAnimation"; // 커스텀 훅 임포트
 
 const GroomSection = () => {
@@ -24,10 +22,13 @@ const GroomSection = () => {
           }`}
           style={{ color: COLORS.DARK_GREEN }}
         >
-          <p className="whitespace-nowrap text-xl sm:text-2xl font-medium">
+          <p
+            className="font-extrabold whitespace-nowrap text-3xl sm:text-2xl font-medium mb-5"
+            style={{ fontFamily: FONT_FAMILIES.SD_MOVE_IT }}
+          >
             염승열 이장미의 아들
           </p>
-          <p className="font-bold whitespace-nowrap text-3xl sm:text-4xl mt-1">
+          <p className="font-thin whitespace-nowrap text-6xl sm:text-4xl">
             기준
           </p>
         </div>

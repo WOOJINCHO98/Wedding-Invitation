@@ -43,7 +43,7 @@ const ThanksShareSection = ({ alertMessage }) => {
         <img src={HeartSvg} alt="Heart Icon" className="w-3 h-3 mt-10 mb-2" />
         <h2
           className="text-2xl font-bold mb-15 whitespace-nowrap"
-          style={{ fontFamily: FONT_FAMILIES.SPOQA_BOLD }}
+          style={{ fontFamily: FONT_FAMILIES.SD_MOVE_IT }}
         >
           행복하게 잘 살겠습니다!
         </h2>

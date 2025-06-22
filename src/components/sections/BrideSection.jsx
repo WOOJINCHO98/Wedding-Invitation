@@ -1,5 +1,5 @@
 import React from "react";
-import { IMAGE_PATHS, COLORS } from "../../constants";
+import { IMAGE_PATHS, COLORS, FONT_FAMILIES } from "../../constants";
 import useInViewAnimation from "../../hooks/useInViewAnimation"; // 커스텀 훅 임포트
 
 const BrideSection = () => {
@@ -32,12 +32,12 @@ const BrideSection = () => {
           className={`w-full text-right pt-12 ${
             isBrideInfoVisible ? "animate-fade-in-up" : "opacity-0" // isBrideInfoVisible 상태에 따라 클래스 적용
           }`}
-          style={{ color: COLORS.PINK }}
+          style={{ fontFamily: FONT_FAMILIES.SD_MOVE_IT, color: COLORS.PINK }}
         >
-          <p className="whitespace-nowrap text-xl sm:text-2xl font-medium">
+          <p className="font-extrabold whitespace-nowrap text-3xl sm:text-2xl font-medium mb-5">
             조영욱 김승원의 딸
           </p>
-          <p className="font-bold whitespace-nowrap text-3xl sm:text-4xl mt-1">
+          <p className="font-thin whitespace-nowrap text-6xl sm:text-4xl">
             다예
           </p>
         </div>

@@ -55,8 +55,8 @@ const AccountTransferSection = ({ alertMessage, onShowQrCode }) => {
     {
       type: "h2",
       text: "마음 전하실 곳",
-      className: "text-3xl font-bold mb-4 whitespace-nowrap",
-      style: { fontFamily: FONT_FAMILIES.SPOQA_BOLD },
+      className: "text-2xl font-bold mb-4 whitespace-nowrap",
+      style: { fontFamily: FONT_FAMILIES.SD_MOVE_IT },
     },
     {
       type: "span",

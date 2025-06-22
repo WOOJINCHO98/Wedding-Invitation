@@ -32,7 +32,10 @@ const LocationSection = ({ alertMessage }) => {
         <span className="text-black">{WEDDING_INFO.DATE} </span>
         <span style={{ color: COLORS.PINK }}>{WEDDING_INFO.TIME}</span>
       </p>
-      <p className="text-l sm:text-lg font-semibold mb-4 whitespace-nowrap">
+      <p
+        className="text-xl font-semibold mb-4 whitespace-nowrap"
+        style={{ fontFamily: FONT_FAMILIES.SD_MOVE_IT }}
+      >
         <span className="text-black">
           {WEDDING_INFO.ADDRESS.split(",")[0]},{" "}
         </span>
