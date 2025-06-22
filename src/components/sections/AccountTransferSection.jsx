@@ -4,7 +4,8 @@ import AccountCard from "../AccountCard.jsx";
 import { COLORS, FONT_FAMILIES } from "../../constants";
 import { copyToClipboard } from "../../utils"; // copyToClipboard 유틸리티 임포트
 
-const AccountTransferSection = ({ alertMessage }) => {
+// onShowQrCode prop을 추가
+const AccountTransferSection = ({ alertMessage, onShowQrCode }) => {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -14,12 +15,12 @@ const AccountTransferSection = ({ alertMessage }) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
-            observer.unobserve(entry.target); // Stop observing once visible
+            observer.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.3, // Trigger when 30% of the section is visible
+        threshold: 0.3,
       }
     );
 
@@ -76,7 +77,7 @@ const AccountTransferSection = ({ alertMessage }) => {
       style={{ backgroundColor: COLORS.DARK_GREEN }}
     >
       {animatedElements.map((item, index) => {
-        const animationDelay = `${index * 0.2}s`; // Adjust delay as needed
+        const animationDelay = `${index * 0.3}s`;
         const commonClasses = `text-animation ${isVisible ? "is-visible" : ""}`;
 
         if (item.type === "img") {
@@ -103,7 +104,7 @@ const AccountTransferSection = ({ alertMessage }) => {
           return (
             <p
               key={index}
-              className="text-center text-xs leading-relaxed opacity-80 mb-0" // Remove mb-10 from p tag
+              className="text-center text-xs leading-relaxed opacity-80 mb-0"
               style={{ fontFamily: FONT_FAMILIES.SPOQA_LIGHT }}
             >
               <span
@@ -132,6 +133,7 @@ const AccountTransferSection = ({ alertMessage }) => {
               number: "302 1407947491",
               owner: "염승열",
               link: "https://qr.kakaopay.com/Ej9LyiG7a",
+              qrIndex: 1,
             },
             {
               name: "염기준",
@@ -139,9 +141,11 @@ const AccountTransferSection = ({ alertMessage }) => {
               number: "100100681440",
               owner: "염기준",
               link: "https://qr.kakaopay.com/Ej7puNagp",
+              qrIndex: 2,
             },
           ]}
           handleCopyAccount={handleCopyAccount}
+          onShowQrCode={onShowQrCode}
         />
 
         <AccountCard
@@ -153,6 +157,7 @@ const AccountTransferSection = ({ alertMessage }) => {
               number: "54903186202101",
               owner: "조영욱",
               link: "https://qr.kakaopay.com/Ej9LyiG7a",
+              qrIndex: 3,
             },
             {
               name: "조다예",
@@ -160,9 +165,11 @@ const AccountTransferSection = ({ alertMessage }) => {
               number: "065902 04 266324",
               owner: "조다예",
               link: "https://qr.kakaopay.com/Ej9LyiG7a",
+              qrIndex: 4,
             },
           ]}
           handleCopyAccount={handleCopyAccount}
+          onShowQrCode={onShowQrCode}
         />
       </div>
     </section>

@@ -47,7 +47,7 @@ const ImageModal = ({
       onClick={onClose} // 모달 외부 클릭 시 닫기
     >
       <div
-        {...handlers} // useSwipeable 훅의 핸들러를 여기에 적용한다.
+        {...handlers} // useSwipeable 훅의 핸들러를 여기에 적용
         className="relative w-full h-full flex flex-col items-center justify-center"
         onClick={(e) => e.stopPropagation()} // 모달 내부 클릭 시 이벤트 전파 중단
       >

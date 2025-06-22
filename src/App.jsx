@@ -16,6 +16,8 @@ import ThanksShareSection from "./components/sections/ThanksShareSection.jsx";
 
 // 모달 컴포넌트 임포트 (갤러리 섹션에서 상태 관리)
 import ImageModal from "./components/ImageModal.jsx";
+// 새로운 QR 코드 모달 컴포넌트 임포트
+import QrCodeModal from "./components/QrCodeModal.jsx";
 
 // 상수 임포트
 import { TOTAL_WEDDING_IMAGES, COLORS } from "./constants";
@@ -24,8 +26,20 @@ function App() {
   const { alertMsg, showAlert, alertMessage } = useAlert();
 
   // 갤러리 및 모달 관련 상태
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false); // Renamed for clarity
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // QR 코드 모달 관련 상태
+  const [isQrModalOpen, setIsQrModalOpen] = useState(false);
+  const [currentQrImageSrc, setCurrentQrImageSrc] = useState("");
+
+  // QR 코드 모달을 열고 이미지 경로를 설정하는 함수
+  const handleShowQrCode = (qrIndex) => {
+    // qr1.png ~ qr4.png 에 매핑
+    const qrPath = `/public/qr${qrIndex}.png`;
+    setCurrentQrImageSrc(qrPath);
+    setIsQrModalOpen(true);
+  };
 
   const goToPrevImage = () => {
     setCurrentImageIndex((prevIndex) =>
@@ -58,18 +72,28 @@ function App() {
         <LocationSection alertMessage={alertMessage} />
         <GallerySection
           setCurrentImageIndex={setCurrentImageIndex}
-          setIsModalOpen={setIsModalOpen}
+          setIsModalOpen={setIsImageModalOpen}
         />
-        <AccountTransferSection alertMessage={alertMessage} />
+        <AccountTransferSection
+          alertMessage={alertMessage}
+          onShowQrCode={handleShowQrCode}
+        />
         <ThanksShareSection alertMessage={alertMessage} />
 
         <ImageModal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
+          isOpen={isImageModalOpen}
+          onClose={() => setIsImageModalOpen(false)}
           currentIndex={currentImageIndex}
           totalImages={TOTAL_WEDDING_IMAGES}
           onPrev={goToPrevImage}
           onNext={goToNextImage}
+        />
+
+        {/* QR 코드 모달 렌더링 */}
+        <QrCodeModal
+          isOpen={isQrModalOpen}
+          onClose={() => setIsQrModalOpen(false)}
+          qrCodeImageSrc={currentQrImageSrc}
         />
       </div>
     </div>
