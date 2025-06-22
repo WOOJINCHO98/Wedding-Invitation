@@ -48,7 +48,7 @@ const AccountTransferSection = ({ alertMessage, onShowQrCode }) => {
   const animatedElements = [
     {
       type: "img",
-      className: "w-3 h-3 mt-16 mb-2",
+      className: "w-3 h-3 mt-22 mb-2",
       src: HeartSvg,
       alt: "Heart Icon",
     },
@@ -66,7 +66,7 @@ const AccountTransferSection = ({ alertMessage, onShowQrCode }) => {
     {
       type: "span",
       text: "너른 마음으로 양해 부탁드립니다.",
-      className: "block",
+      className: "block mb-14",
     },
   ];
 
@@ -132,7 +132,7 @@ const AccountTransferSection = ({ alertMessage, onShowQrCode }) => {
               bank: "농협은행",
               number: "302 1407947491",
               owner: "염승열",
-              link: "https://qr.kakaopay.com/Ej9LyiG7a",
+              link: "https://qr.kakaopay.com/FFyW9Mi4u",
               qrIndex: 1,
             },
             {
@@ -156,7 +156,7 @@ const AccountTransferSection = ({ alertMessage, onShowQrCode }) => {
               bank: "우리은행",
               number: "54903186202101",
               owner: "조영욱",
-              link: "https://qr.kakaopay.com/Ej9LyiG7a",
+              link: "https://qr.kakaopay.com/FCw0LAdwP",
               qrIndex: 3,
             },
             {
