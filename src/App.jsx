@@ -36,7 +36,7 @@ function App() {
   // QR 코드 모달을 열고 이미지 경로를 설정하는 함수
   const handleShowQrCode = (qrIndex) => {
     // qr1.png ~ qr4.png 에 매핑
-    const qrPath = `/public/qr${qrIndex}.png`;
+    const qrPath = `./qr${qrIndex}.png`;
     setCurrentQrImageSrc(qrPath);
     setIsQrModalOpen(true);
   };
