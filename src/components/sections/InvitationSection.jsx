@@ -41,7 +41,7 @@ const InvitationSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="h-120 flex flex-col justify-center items-center text-white p-8 text-center scroll-snap-align-start flex-shrink-0"
+      className="h-170 flex flex-col justify-center items-center text-white p-8 text-center scroll-snap-align-start flex-shrink-0"
       style={{ backgroundColor: COLORS.DARK_GREEN }}
     >
       <h2 className="text-2xl font-bold mb-10 whitespace-nowrap">

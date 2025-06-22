@@ -17,27 +17,27 @@ const CoverSection = () => {
   }); // 훅 사용
 
   return (
-    <section className="relative w-full h-160 text-white overflow-hidden scroll-snap-align-start flex-shrink-0">
-      <img
-        src={IMAGE_PATHS.COVER}
-        alt="Wedding Couple"
-        className="absolute inset-0 w-screen object-cover z-0"
-        onError={(e) => {
-          e.target.onerror = null;
-          e.target.src =
-            "https://placehold.co/1080x1920/667eea/ffffff?text=Image+Not+Found";
-        }}
-      />
+    <section
+      className="relative w-full text-white overflow-hidden scroll-snap-align-start flex-shrink-0"
+      style={{
+        backgroundImage: `url(${IMAGE_PATHS.COVER})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        aspectRatio: "1080 / 1920", // 배경 이미지의 비율에 따라 높이 설정
+      }}
+    >
+      {/* 이미지에 그래디언트 */}
       <div
-        className="absolute inset-x-0 bottom-0 h-1/2 z-10"
+        className="absolute inset-x-0 bottom-0 h-1/3 z-10"
         style={{
           backgroundImage: `linear-gradient(to top, ${COLORS.DARK_GREEN}, rgba(19, 31, 5, 0.6), transparent)`,
         }}
       ></div>
-      <div className="absolute inset-0 z-20 flex flex-col justify-between py-10 px-8">
+      <div className="absolute inset-0 z-20 flex flex-col justify-between px-8">
         <div className="w-full text-center">
           <p
-            className="flex justify-between items-center text-base font-serif uppercase opacity-90 whitespace-nowrap"
+            className="flex justify-between items-center text-base font-serif uppercase opacity-90 whitespace-nowrap mt-6"
             style={{ fontFamily: FONT_FAMILIES.GOTHAM_BOLD }}
           >
             <span>SAVE</span>
@@ -77,7 +77,7 @@ const CoverSection = () => {
           />
         </div>
         <div
-          ref={weddingInfoRef} // 훅에서 받은 ref 사용
+          ref={weddingInfoRef}
           className={`w-full text-center ${
             isWeddingInfoVisible ? "animate-fade-in-up" : "opacity-0"
           }`}

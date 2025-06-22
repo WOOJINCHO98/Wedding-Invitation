@@ -27,7 +27,7 @@ const LocationSection = ({ alertMessage }) => {
       className="w-full max-w-md flex flex-col items-center bg-white"
       style={{ color: COLORS.DARK_GREEN }}
     >
-      <img src={HeartSvg} alt="Heart Icon" className="w-3 h-3 mt-16 mb-2" />
+      <img src={HeartSvg} alt="Heart Icon" className="w-3 h-3 mt-24 mb-2" />
       <p className="text-base font-medium whitespace-nowrap">
         <span className="text-black">{WEDDING_INFO.DATE} </span>
         <span style={{ color: COLORS.PINK }}>{WEDDING_INFO.TIME}</span>

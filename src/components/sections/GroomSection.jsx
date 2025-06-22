@@ -12,7 +12,9 @@ const GroomSection = () => {
   return (
     <section
       className="relative h-210 w-full flex flex-col items-center justify-start p-8 overflow-hidden scroll-snap-align-start flex-shrink-0"
-      style={{ backgroundColor: COLORS.PINK }}
+      style={{
+        background: `linear-gradient( WHITE 72.5%, ${COLORS.PINK} 98.5%)`,
+      }}
     >
       <div className="w-full max-w-sm sm:max-w-md mx-auto relative h-full flex flex-col items-center">
         <div

@@ -35,7 +35,7 @@ const AccountCard = ({ title, accounts, handleCopyAccount, onShowQrCode }) => {
 
   return (
     <div
-      className="w-full max-w-md rounded-lg px-4 py-6 mb-3 shadow-lg"
+      className="w-full max-w-md rounded-lg px-4 py-6 mb-3"
       style={{ backgroundColor: COLORS.LIGHT_GRAY }}
     >
       <h3 className="text-base mb-4 opacity-50 whitespace-nowrap">{title}</h3>
