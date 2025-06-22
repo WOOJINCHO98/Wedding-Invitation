@@ -53,7 +53,7 @@ const ImageModal = ({
       >
         {/* 이미지 */}
         <img
-          src={`./wedding_image${currentIndex + 1}.png`}
+          src={`./wedding_image${currentIndex + 1}.jpg`}
           alt={`Wedding Moment ${currentIndex + 1}`}
           className="w-[85%] max-h-[85%] object-contain mb-5" // 이미지 크기 조절
         />

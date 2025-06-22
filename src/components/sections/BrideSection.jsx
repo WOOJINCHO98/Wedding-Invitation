@@ -1,6 +1,8 @@
 import React from "react";
 import { IMAGE_PATHS, COLORS, FONT_FAMILIES } from "../../constants";
 import useInViewAnimation from "../../hooks/useInViewAnimation"; // 커스텀 훅 임포트
+import BrideText1 from "../../assets/brideText1.svg";
+import BrideText2 from "../../assets/brideText2.svg";
 
 const BrideSection = () => {
   // 훅을 사용하여 ref와 isVisible 상태를 가져옵니다.
@@ -27,7 +29,7 @@ const BrideSection = () => {
 
       <div className="absolute inset-0 z-20 px-8 py-15 flex flex-col">
         {/* 텍스트를 감싸는 div에 ref와 애니메이션 클래스를 적용합니다. */}
-        <div
+        {/* <div
           ref={brideInfoRef} // 훅에서 받은 ref를 연결합니다.
           className={`w-full text-right pt-12 ${
             isBrideInfoVisible ? "animate-fade-in-up" : "opacity-0" // isBrideInfoVisible 상태에 따라 클래스 적용
@@ -41,7 +43,36 @@ const BrideSection = () => {
           <p className="font-thin whitespace-nowrap text-6xl sm:text-4xl">
             다예
           </p>
+        </div> */}
+        <div
+          ref={brideInfoRef}
+          className={`${
+            isBrideInfoVisible ? "animate-fade-in-up" : "opacity-0"
+          }`}
+          style={{ fontFamily: FONT_FAMILIES.SD_MOVE_IT, color: COLORS.PINK }}
+        >
+          <img
+            src={BrideText1}
+            alt="Bride Text 1"
+            className="absolute right-0 top-12 w-42"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src =
+                "https://placehold.co/400x100/cccccc/333333?text=Bride+Text+1";
+            }}
+          />
+          <img
+            src={BrideText2}
+            alt="Bride Text 2"
+            className="absolute right-0 top-24 w-28"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src =
+                "https://placehold.co/400x100/cccccc/333333?text=Bride+Text+2";
+            }}
+          />
         </div>
+
         <img
           src={IMAGE_PATHS.PARENTS_TEXT2}
           alt="Parents Message"

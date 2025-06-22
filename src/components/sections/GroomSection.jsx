@@ -1,6 +1,8 @@
 import React from "react";
 import { IMAGE_PATHS, COLORS, FONT_FAMILIES } from "../../constants";
 import useInViewAnimation from "../../hooks/useInViewAnimation"; // 커스텀 훅 임포트
+import GroomText1 from "../../assets/groomText1.svg";
+import GroomText2 from "../../assets/groomText2.svg";
 
 const GroomSection = () => {
   const [groomInfoRef, isGroomInfoVisible] = useInViewAnimation({
@@ -9,13 +11,13 @@ const GroomSection = () => {
 
   return (
     <section
-      className="relative h-210 w-full flex flex-col items-center justify-start p-8 overflow-hidden scroll-snap-align-start flex-shrink-0"
+      className="relative w-full flex flex-col items-center justify-start p-8 overflow-hidden scroll-snap-align-start flex-shrink-0"
       style={{
         background: `linear-gradient( WHITE 72.5%, ${COLORS.PINK} 98.5%)`,
       }}
     >
       <div className="w-full max-w-sm sm:max-w-md mx-auto relative h-full flex flex-col items-center">
-        <div
+        {/* <div
           ref={groomInfoRef} // 훅에서 받은 ref 사용
           className={`w-full text-left mb-8 mt-12 ${
             isGroomInfoVisible ? "animate-fade-in-up" : "opacity-0"
@@ -32,16 +34,44 @@ const GroomSection = () => {
           <p className="font-thin whitespace-nowrap text-6xl sm:text-4xl">
             기준
           </p>
-        </div>
+        </div> */}
 
-        <div
-          className="relative w-full mb-5 flex-grow"
-          style={{ minHeight: "300px" }}
-        >
+        <div className="relative w-full flex-grow">
+          <div
+            ref={groomInfoRef}
+            className={`
+            w-full h-38 mt-12 relative
+            ${isGroomInfoVisible ? "animate-fade-in-up" : "opacity-0"}`}
+            style={{
+              fontFamily: FONT_FAMILIES.SD_MOVE_IT,
+              color: COLORS.DARK_GREEN,
+            }}
+          >
+            <img
+              src={GroomText1}
+              alt="Groom Text 1"
+              className="mb-3 w-46"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src =
+                  "https://placehold.co/200x50/cccccc/333333?text=Groom+Text+1";
+              }}
+            />
+            <img
+              src={GroomText2}
+              alt="Groom Text 2"
+              className="w-22"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src =
+                  "https://placehold.co/200x50/cccccc/333333?text=Groom+Text+2";
+              }}
+            />
+          </div>
           <img
             src={IMAGE_PATHS.PARENTS1}
             alt="Parents Main"
-            className="w-full h-full object-cover"
+            className="w-screen object-cover"
             onError={(e) => {
               e.target.onerror = null;
               e.target.src =
@@ -51,7 +81,7 @@ const GroomSection = () => {
           <img
             src={IMAGE_PATHS.PARENTS_TEXT1}
             alt="Parents Message"
-            className="absolute -top-18 right-0 transform translate-x-4 w-64 z-20"
+            className="absolute top-34 right-0 transform translate-x-4 w-56 z-20"
             onError={(e) => {
               e.target.onerror = null;
               e.target.src =
