@@ -58,7 +58,7 @@ const AccountCard = ({ title, accounts, handleCopyAccount, onShowQrCode }) => {
                   )
                 }
                 className="text-white px-3 py-2 rounded-md text-xs whitespace-nowrap"
-                style={{ backgroundColor: COLORS.DARK_GREEN }}
+                style={{ backgroundColor: COLORS.LIGHT_GRAY }}
               >
                 복사
               </button>
