@@ -32,14 +32,6 @@
   src: url("./fonts/SpoqaHanSansNeo_TTF_original/SpoqaHanSansNeo-Bold.ttf") format("truetype");
 }
 
-@font-face {
-	font-family: "SDMoveIt";
-	src: url("https://hmolhy4qpa.execute-api.ap-northeast-2.amazonaws.com/v1/api/css/drop_fontstream_css/?sid=gAAAAABoV8OmoalKxEUT-xnvG3iP_KNZwMnAA80etibmpsfBkxuJzlDA-nXaju10sRvLUM1ib8mik3QxzOzBzqcJcZBWJMxx0fxzYFi-IQjHdT5qqpYKO6SUebne71-q_5jDJQZ3tamWKlkUgqi-NamxhdHRsEuGGSedrixBB_6-j5Reo-LCxOLHxK0dHcjHJTp0ubokB8pSTHT0gql90XtYodlolh5TCC27-CT3IraOAbZAB6yEQrIQ5WYvz3hIeLHcJdmV2Yy7")
-		format("truetype");
-	font-weight: normal;
-	font-style: normal;
-}
-
 body {
   font-family: "SpoqaHanSansNeo-Regular", sans-serif;
 }

@@ -45,5 +45,5 @@ export const FONT_FAMILIES = {
   SPOQA_BOLD: "SpoqaHanSansNeo-Bold",
   SPOQA_LIGHT: "SpoqaHanSansNeo-Light",
   GOTHAM_BOLD: "Gotham-Bold",
-  SD_MOVE_IT: "SDMoveIt",
+  SD_MOVE_IT: "SD Move It",
 };
