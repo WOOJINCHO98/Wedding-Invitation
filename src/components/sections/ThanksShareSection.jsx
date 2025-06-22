@@ -45,7 +45,8 @@ const ThanksShareSection = ({ alertMessage }) => {
           className="text-2xl font-bold mb-15 whitespace-nowrap"
           style={{ fontFamily: FONT_FAMILIES.SD_MOVE_IT }}
         >
-          행복하게 잘 살겠습니다!
+          <span style={{ color: COLORS.PINK }}>행복하게</span>
+          <span> 잘 살겠습니다!</span>
         </h2>
       </div>
 

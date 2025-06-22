@@ -33,7 +33,7 @@ const LocationSection = ({ alertMessage }) => {
         <span style={{ color: COLORS.PINK }}>{WEDDING_INFO.TIME}</span>
       </p>
       <p
-        className="text-xl font-semibold mb-4 whitespace-nowrap"
+        className="text-2xl font-semibold mb-4 whitespace-nowrap"
         style={{ fontFamily: FONT_FAMILIES.SD_MOVE_IT }}
       >
         <span className="text-black">

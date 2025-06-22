@@ -34,8 +34,9 @@ const BrideSection = () => {
           }`}
           style={{ fontFamily: FONT_FAMILIES.SD_MOVE_IT, color: COLORS.PINK }}
         >
-          <p className="font-extrabold whitespace-nowrap text-3xl sm:text-2xl font-medium mb-5">
-            조영욱 김승원의 딸
+          <p className="whitespace-nowrap text-3xl sm:text-2xl font-medium mb-5">
+            <span className="font-extrabold">조영욱 김승원</span>
+            <span className="font-thin">의 딸</span>
           </p>
           <p className="font-thin whitespace-nowrap text-6xl sm:text-4xl">
             다예

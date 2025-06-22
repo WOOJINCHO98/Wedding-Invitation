@@ -20,13 +20,14 @@ const GroomSection = () => {
           className={`w-full text-left mb-8 mt-12 ${
             isGroomInfoVisible ? "animate-fade-in-up" : "opacity-0"
           }`}
-          style={{ color: COLORS.DARK_GREEN }}
+          style={{
+            fontFamily: FONT_FAMILIES.SD_MOVE_IT,
+            color: COLORS.DARK_GREEN,
+          }}
         >
-          <p
-            className="font-extrabold whitespace-nowrap text-3xl sm:text-2xl font-medium mb-5"
-            style={{ fontFamily: FONT_FAMILIES.SD_MOVE_IT }}
-          >
-            염승열 이장미의 아들
+          <p className="whitespace-nowrap text-3xl sm:text-2xl font-medium mb-5">
+            <span className="font-extrabold">염승열 이장미</span>
+            <span className="font-thin">의 아들</span>
           </p>
           <p className="font-thin whitespace-nowrap text-6xl sm:text-4xl">
             기준
