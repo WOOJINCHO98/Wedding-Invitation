@@ -65,8 +65,8 @@ const ThanksShareSection = ({ alertMessage }) => {
       <div className="flex flex-col space-y-4 w-full max-w-xs mb-15">
         <KakaoShareButton
           kakaoApiKey={KAKAO_API_KEY}
-          title="기준, 다예의 결혼식에 초대합니다."
-          description="2025. 9. 7 일요일 오후 12시 30분, 더채플앳청담 3층 커티지홀"
+          title="염기준🩵조다예 결혼합니다"
+          description="9월 7일 (일) 오후 12:30 더채플앳청담 3층, 커티지홀"
           imageUrl={"https://mobile-wedding-inv.netlify.app/title_image.png"}
           webUrl={window.location.href}
           mobileWebUrl={window.location.href}
