@@ -138,7 +138,7 @@ const AccountTransferSection = ({ alertMessage }) => {
               bank: "케이뱅크",
               number: "100100681440",
               owner: "염기준",
-              link: "https://qr.kakaopay.com/Ej9LyiG7a",
+              link: "https://qr.kakaopay.com/Ej7puNagp",
             },
           ]}
           handleCopyAccount={handleCopyAccount}
