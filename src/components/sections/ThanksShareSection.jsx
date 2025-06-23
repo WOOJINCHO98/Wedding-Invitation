@@ -40,9 +40,9 @@ const ThanksShareSection = ({ alertMessage }) => {
           isThanksContentVisible ? "animate-fade-in-up" : "opacity-0"
         }`}
       >
-        <img src={HeartSvg} alt="Heart Icon" className="w-3 h-3 mt-10 mb-2" />
+        <img src={HeartSvg} alt="Heart Icon" className="w-4 h-3 mt-10 mb-2" />
         <h2
-          className="text-2xl font-bold mb-15 whitespace-nowrap"
+          className="text-2xl font-bold mb-17 whitespace-nowrap"
           style={{ fontFamily: FONT_FAMILIES.SD_MOVE_IT }}
         >
           <span style={{ color: COLORS.PINK }}>행복하게</span>
@@ -50,7 +50,7 @@ const ThanksShareSection = ({ alertMessage }) => {
         </h2>
       </div>
 
-      <div className="w-full h-full sm:w-80 sm:h-80 bg-white relative rounded-sm overflow-hidden p-12 mb-12">
+      <div className="w-full h-full sm:w-80 sm:h-80 bg-white relative rounded-sm overflow-hidden p-12 mb-6">
         <img
           src={IMAGE_PATHS.INVITATION}
           alt="Wedding Couple Thanks"
@@ -63,7 +63,7 @@ const ThanksShareSection = ({ alertMessage }) => {
         />
       </div>
 
-      <div className="flex flex-col space-y-4 w-full max-w-xs mb-15">
+      <div className="flex flex-col space-y-4 w-full max-w-xs mb-20">
         <KakaoShareButton
           kakaoApiKey={KAKAO_API_KEY}
           title="염기준🩵조다예 결혼합니다"

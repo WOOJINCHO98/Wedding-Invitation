@@ -61,7 +61,7 @@ const AccountTransferSection = ({ alertMessage, onShowQrCode }) => {
     {
       type: "span",
       text: "직접 축하를 전하지 못하는 분들을 위해 계좌번호를 기재합니다.",
-      className: "block",
+      className: "block opacity-60",
     },
     {
       type: "span",

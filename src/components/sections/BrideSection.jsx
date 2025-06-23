@@ -13,7 +13,7 @@ const BrideSection = () => {
 
   return (
     <section
-      className="relative h-210 w-full overflow-hidden scroll-snap-align-start flex-shrink-0"
+      className="relative h-205 w-full overflow-hidden scroll-snap-align-start flex-shrink-0"
       style={{ backgroundColor: COLORS.DARK_GREEN }}
     >
       <img

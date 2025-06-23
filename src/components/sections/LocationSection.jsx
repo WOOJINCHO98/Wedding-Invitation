@@ -27,13 +27,13 @@ const LocationSection = ({ alertMessage }) => {
       className="w-full max-w-md flex flex-col items-center bg-white"
       style={{ color: COLORS.DARK_GREEN }}
     >
-      <img src={HeartSvg} alt="Heart Icon" className="w-3 h-3 mt-24 mb-2" />
-      <p className="text-base font-medium whitespace-nowrap">
+      <img src={HeartSvg} alt="Heart Icon" className="w-3 h-3 mt-24 mb-3" />
+      <p className="text-sm font-medium whitespace-nowrap mb-2">
         <span className="text-black">{WEDDING_INFO.DATE} </span>
         <span style={{ color: COLORS.PINK }}>{WEDDING_INFO.TIME}</span>
       </p>
       <p
-        className="text-xl font-semibold mb-4 whitespace-nowrap"
+        className="text-[22px] font-semibold mb-4 whitespace-nowrap"
         style={{ fontFamily: FONT_FAMILIES.SD_MOVE_IT }}
       >
         <span className="text-black">
@@ -130,7 +130,7 @@ const LocationSection = ({ alertMessage }) => {
           />
         </div>
       </div>
-      <p className="mb-30 text-[11px] opacity-80 whitespace-nowrap">
+      <p className="font-bold mb-25 text-[11px] opacity-60 whitespace-nowrap">
         화환은 정중히 사양합니다. 마음만 감사히 받겠습니다.
       </p>
     </section>
