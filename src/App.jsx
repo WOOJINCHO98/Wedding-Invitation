@@ -41,18 +41,6 @@ function App() {
     setIsQrModalOpen(true);
   };
 
-  const goToPrevImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? prevIndex : prevIndex - 1
-    );
-  };
-
-  const goToNextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === TOTAL_WEDDING_IMAGES - 1 ? prevIndex : prevIndex + 1
-    );
-  };
-
   return (
     <div className="flex justify-center items-center min-h-screen bg-zinc-800 p-0 sm:p-4 font-inter">
       <div
@@ -80,21 +68,23 @@ function App() {
         />
         <ThanksShareSection alertMessage={alertMessage} />
 
-        <ImageModal
-          isOpen={isImageModalOpen}
-          onClose={() => setIsImageModalOpen(false)}
-          currentIndex={currentImageIndex}
-          totalImages={TOTAL_WEDDING_IMAGES}
-          onPrev={goToPrevImage}
-          onNext={goToNextImage}
-        />
+        {isImageModalOpen && (
+          <ImageModal
+            isOpen={isImageModalOpen}
+            onClose={() => setIsImageModalOpen(false)}
+            currentIndex={currentImageIndex}
+            totalImages={TOTAL_WEDDING_IMAGES}
+            setCurrentImageIndex={setCurrentImageIndex}
+          />
+        )}
 
-        {/* QR 코드 모달 렌더링 */}
-        <QrCodeModal
-          isOpen={isQrModalOpen}
-          onClose={() => setIsQrModalOpen(false)}
-          qrCodeImageSrc={currentQrImageSrc}
-        />
+        {isQrModalOpen && (
+          <QrCodeModal
+            isOpen={isQrModalOpen}
+            onClose={() => setIsQrModalOpen(false)}
+            qrCodeImageSrc={currentQrImageSrc}
+          />
+        )}
       </div>
     </div>
   );

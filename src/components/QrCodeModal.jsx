@@ -1,9 +1,7 @@
 import React from "react";
 import { COLORS } from "../constants";
 
-const QrCodeModal = ({ isOpen, onClose, qrCodeImageSrc }) => {
-  if (!isOpen) return null;
-
+const QrCodeModal = ({ onClose, qrCodeImageSrc }) => {
   return (
     <div
       className="fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50 transition-opacity duration-300"
