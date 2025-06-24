@@ -67,8 +67,8 @@ export const COLORS = {
 };
 
 export const FONT_FAMILIES = {
-  SPOQA_BOLD: "SpoqaHanSansNeo-Bold",
-  SPOQA_LIGHT: "SpoqaHanSansNeo-Light",
+  SPOQA_BOLD: "Spoqa Han Sans Neo",
+  SPOQA_LIGHT: "Spoqa Han Sans Neo",
   GOTHAM_BOLD: "Gotham-Bold",
   SD_MOVE_IT: "SD Move It",
 };
