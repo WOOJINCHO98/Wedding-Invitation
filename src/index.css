@@ -66,7 +66,7 @@ body {
 .ampersand-drawing {
   stroke-dasharray: 1000; /* SVG 경로의 총 길이에 따라 조절 */
   stroke-dashoffset: 1000; /* 초기에는 완전히 숨김 */
-  animation: drawAmpersand 8s ease-in forwards; /* 2초 동안 애니메이션 재생, 최종 상태 유지 */
+  animation: drawAmpersand 7s ease forwards; /* 7초 동안 애니메이션 재생, 최종 상태 유지 */
   animation-delay: 0.5s; /* 필요에 따라 애니메이션 시작 전 지연 시간 추가 */
 }
 

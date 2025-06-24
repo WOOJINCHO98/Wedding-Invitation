@@ -1,4 +1,4 @@
-import React, { useEffect, memo, useRef } from "react";
+import React, { useEffect, memo, useRef, useState } from "react";
 import { TOTAL_WEDDING_IMAGES } from "../constants"; // 상수 임포트
 
 const SWIPE_THRESHOLD = 50; // 스와이프 인식을 위한 최소 이동 거리 (px)
@@ -6,6 +6,9 @@ const SWIPE_THRESHOLD = 50; // 스와이프 인식을 위한 최소 이동 거�
 const ImageModal = memo(
   ({ isOpen, onClose, currentIndex, setCurrentImageIndex }) => {
     const touchStartX = useRef(0);
+    const imageRef = useRef(null); // 이미지 요소에 접근하기 위한 ref
+    const [imageWidth, setImageWidth] = useState("auto"); // 이미지 너비를 저장할 상태
+    const prevImageWidth = useRef(null); // 이전 이미지의 너비를 저장할 ref
 
     // 모달이 열릴 때 body 스크롤을 막는 useEffect
     useEffect(() => {
@@ -53,34 +56,58 @@ const ImageModal = memo(
       }
     };
 
+    // 이미지 로드 완료 시 너비 측정
+    const handleImageLoad = () => {
+      if (imageRef.current) {
+        const currentLoadedWidth = imageRef.current.offsetWidth;
+        setImageWidth(`${currentLoadedWidth}px`);
+        prevImageWidth.current = `${currentLoadedWidth}px`; // 로드된 너비를 저장
+      }
+    };
+
+    // 현재 이미지가 변경될 때마다 이미지 로딩을 처리하고, 이전 너비를 유지합니다.
+    useEffect(() => {
+      // 새로운 이미지가 로드되기 전까지는 이전 이미지의 너비를 유지
+      if (prevImageWidth.current) {
+        setImageWidth(prevImageWidth.current);
+      } else {
+        // 첫 로드 시 또는 이전 너비가 없을 경우 "auto"로 설정
+        setImageWidth("auto");
+      }
+    }, [currentIndex]);
+
     return (
       <div
         className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
         onClick={onClose} // 모달 외부 클릭 시 닫기
       >
         <div
-          className="relative w-full h-full flex flex-col items-center justify-center"
+          className="relative w-full h-full flex flex-col items-center justify-center p-4"
           onClick={(e) => e.stopPropagation()} // 모달 내부 클릭 시 이벤트 전파 중단
           onTouchStart={handleTouchStart} // 스와이프 시작
           onTouchEnd={handleTouchEnd} // 스와이프 종료
         >
           {/* 이미지 */}
-          <div className="w-[85%] max-h-[85%] flex items-center justify-center mb-5">
+          <div className="flex items-center justify-center max-h-[75%]">
             <img
+              ref={imageRef}
               src={`/wedding_image${currentIndex + 1}.png`} // public 폴더의 이미지 경로
               alt={`결혼 이미지 ${currentIndex + 1}`}
               className="max-w-full max-h-full object-contain" // 이미지 크기 조절
+              onLoad={handleImageLoad} // 이미지 로드 완료 시 너비 측정
             />
           </div>
 
-          <div className="flex w-[85%] justify-between items-center px-4">
-            {" "}
-            {/* 버튼과 닫기 버튼 사이의 간격을 조절하기 위해 padding 추가 */}
+          <div
+            className="flex justify-between items-center mt-5"
+            style={{ width: imageWidth }} // 동적으로 너비 설정
+          >
             {/* 닫기 버튼 */}
             <button
-              className="transform bg-gray-700/70 text-white rounded-full p-3 shadow-lg"
+              className="text-white rounded-full p-3 shadow-lg"
               onClick={onClose}
               aria-label="모달 닫기"
+              style={{ backgroundColor: "#3C3C3CCC" }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -101,9 +128,10 @@ const ImageModal = memo(
               {/* 이전 버튼 */}
               {currentIndex > 0 ? (
                 <button
-                  className="transform bg-gray-700/70 text-white rounded-full p-3 shadow-lg"
+                  className="text-white rounded-full p-3 shadow-lg"
                   onClick={handlePrev}
                   aria-label="이전 이미지"
+                  style={{ backgroundColor: "#3C3C3CCC" }}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -127,9 +155,10 @@ const ImageModal = memo(
               {/* 다음 버튼 */}
               {currentIndex < TOTAL_WEDDING_IMAGES - 1 ? (
                 <button
-                  className="transform bg-gray-700/70 text-white rounded-full p-3 shadow-lg"
+                  className="text-white rounded-full p-3 shadow-lg"
                   onClick={handleNext}
                   aria-label="다음 이미지"
+                  style={{ backgroundColor: "#3C3C3CCC" }}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

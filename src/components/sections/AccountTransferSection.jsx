@@ -104,7 +104,7 @@ const AccountTransferSection = ({ alertMessage, onShowQrCode }) => {
           return (
             <p
               key={index}
-              className="text-center text-xs leading-relaxed opacity-80 mb-0"
+              className="text-center text-xs leading-relaxed tracking-tight opacity-80 mb-0"
               style={{ fontFamily: FONT_FAMILIES.SPOQA_LIGHT }}
             >
               <span

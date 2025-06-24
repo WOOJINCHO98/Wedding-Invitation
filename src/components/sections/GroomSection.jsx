@@ -38,10 +38,7 @@ const GroomSection = () => {
 
         <div className="relative w-full flex-grow">
           <div
-            ref={groomInfoRef}
-            className={`
-            w-full h-38 mt-12 relative
-            ${isGroomInfoVisible ? "animate-fade-in-up" : "opacity-0"}`}
+            className="w-full h-38 mt-12 relative"
             style={{
               fontFamily: FONT_FAMILIES.SD_MOVE_IT,
               color: COLORS.DARK_GREEN,
@@ -78,16 +75,21 @@ const GroomSection = () => {
                 "https://placehold.co/300x400/cccccc/333333?text=Main+Image";
             }}
           />
-          <img
-            src={IMAGE_PATHS.PARENTS_TEXT1}
-            alt="Parents Message"
-            className="absolute top-34 right-0 transform translate-x-4 w-56 z-20"
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src =
-                "https://placehold.co/200x50/cccccc/333333?text=Handwriting+Text";
-            }}
-          />
+          <div
+            ref={groomInfoRef}
+            className={`absolute top-34 right-0 transform translate-x-4 w-56 z-20
+              ${isGroomInfoVisible ? "animate-fade-in-up" : "opacity-0"}`}
+          >
+            <img
+              src={IMAGE_PATHS.PARENTS_TEXT1}
+              alt="Parents Message"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src =
+                  "https://placehold.co/200x50/cccccc/333333?text=Handwriting+Text";
+              }}
+            />
+          </div>
         </div>
 
         <img

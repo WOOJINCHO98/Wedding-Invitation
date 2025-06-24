@@ -54,7 +54,7 @@ const InvitationSection = () => {
         {invitationLines.map((line, index) => (
           <span
             key={index}
-            className={`block mb-2 whitespace-nowrap text-animation ${
+            className={`block mb-2 whitespace-nowrap tracking-tight text-animation ${
               isVisible ? "is-visible" : ""
             }`}
             style={{ animationDelay: `${index * 0.8}s` }}

@@ -28,12 +28,12 @@ const LocationSection = ({ alertMessage }) => {
       style={{ color: COLORS.DARK_GREEN }}
     >
       <img src={HeartSvg} alt="Heart Icon" className="w-3 h-3 mt-24 mb-3" />
-      <p className="text-sm font-medium whitespace-nowrap mb-2">
+      <p className="text-sm font-medium whitespace-nowrap tracking-tighter mb-2">
         <span className="text-black">{WEDDING_INFO.DATE} </span>
         <span style={{ color: COLORS.PINK }}>{WEDDING_INFO.TIME}</span>
       </p>
       <p
-        className="text-[22px] font-semibold mb-4 whitespace-nowrap"
+        className="text-[1.2rem] font-semibold mb-4 whitespace-nowrap"
         style={{ fontFamily: FONT_FAMILIES.SD_MOVE_IT }}
       >
         <span className="text-black">
@@ -83,7 +83,7 @@ const LocationSection = ({ alertMessage }) => {
         </button>
       </div>
       <div className="h-70 flex justify-center items-center font-inter">
-        <div className="w-full max-w-md text-left space-y-3 mb-8 text-[11px] sm:text-[10px] leading-relaxed">
+        <div className="w-full text-left space-y-3 mb-8 text-[0.7rem] tracking-tighter leading-relaxed">
           <InfoItem label="주소" content={WEDDING_INFO.ADDRESS} />
           <InfoItem
             label="지하철"
@@ -130,7 +130,7 @@ const LocationSection = ({ alertMessage }) => {
           />
         </div>
       </div>
-      <p className="font-bold mb-25 text-[11px] opacity-60 whitespace-nowrap">
+      <p className="font-bold mb-25 text-[0.7rem] opacity-60 tracking-tighter whitespace-nowrap">
         화환은 정중히 사양합니다. 마음만 감사히 받겠습니다.
       </p>
     </section>

@@ -33,7 +33,6 @@ const ThanksShareSection = ({ alertMessage }) => {
       className="w-full flex flex-col items-center p-15 scroll-snap-align-start flex-shrink-0 text-white"
       style={{ backgroundColor: COLORS.DARK_GREEN }}
     >
-      {/* Heart SVG와 제목을 감싸는 div에 ref와 애니메이션 클래스 적용 */}
       <div
         ref={thanksContentRef}
         className={`flex flex-col items-center ${
@@ -79,7 +78,7 @@ const ThanksShareSection = ({ alertMessage }) => {
           className="text-white py-3 rounded-lg border border-white/20 text-base flex items-center justify-center whitespace-nowrap"
           style={{ backgroundColor: COLORS.TRANSPARENT_BLACK }}
         >
-          <FiLink className="w-5 h-5 mr-2 -scale-x-100" />
+          <FiLink className="w-4 h-4 mr-2 -scale-x-100" />
           청첩장 링크 복사하기
         </button>
       </div>

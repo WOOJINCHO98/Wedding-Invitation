@@ -28,7 +28,6 @@ const BrideSection = () => {
       />
 
       <div className="absolute inset-0 z-20 px-8 py-15 flex flex-col">
-        {/* 텍스트를 감싸는 div에 ref와 애니메이션 클래스를 적용합니다. */}
         {/* <div
           ref={brideInfoRef} // 훅에서 받은 ref를 연결합니다.
           className={`w-full text-right pt-12 ${
@@ -45,16 +44,13 @@ const BrideSection = () => {
           </p>
         </div> */}
         <div
-          ref={brideInfoRef}
-          className={`${
-            isBrideInfoVisible ? "animate-fade-in-up" : "opacity-0"
-          }`}
+          className="relative w-full flex-grow"
           style={{ fontFamily: FONT_FAMILIES.SD_MOVE_IT, color: COLORS.PINK }}
         >
           <img
             src={BrideText1}
             alt="Bride Text 1"
-            className="absolute right-0 top-12 w-42"
+            className="absolute right-0 top-9 w-42"
             onError={(e) => {
               e.target.onerror = null;
               e.target.src =
@@ -64,7 +60,7 @@ const BrideSection = () => {
           <img
             src={BrideText2}
             alt="Bride Text 2"
-            className="absolute right-0 top-24 w-28"
+            className="absolute right-0 top-21 w-28"
             onError={(e) => {
               e.target.onerror = null;
               e.target.src =
@@ -73,16 +69,23 @@ const BrideSection = () => {
           />
         </div>
 
-        <img
-          src={IMAGE_PATHS.PARENTS_TEXT2}
-          alt="Parents Message"
-          className="absolute bottom-5 right-4 w-48 z-20"
-          onError={(e) => {
-            e.target.onerror = null;
-            e.target.src =
-              "https://placehold.co/200x50/cccccc/333333?text=Handwriting+Text";
-          }}
-        />
+        <div
+          ref={brideInfoRef}
+          className={`absolute bottom-5 right-4 w-48 z-20 ${
+            isBrideInfoVisible ? "animate-fade-in-up" : "opacity-0"
+          }`}
+        >
+          <img
+            src={IMAGE_PATHS.PARENTS_TEXT2}
+            alt="Parents Message"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src =
+                "https://placehold.co/200x50/cccccc/333333?text=Handwriting+Text";
+            }}
+          />
+        </div>
+
         <img
           src={IMAGE_PATHS.CHILDREN2}
           alt="Child Image"
