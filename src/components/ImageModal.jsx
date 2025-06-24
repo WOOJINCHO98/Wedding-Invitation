@@ -1,5 +1,5 @@
 import React, { useEffect, memo, useRef, useState } from "react";
-import { TOTAL_WEDDING_IMAGES } from "../constants"; // 상수 임포트
+import { TOTAL_WEDDING_IMAGES, GALLERY_IMAGES } from "../constants";
 
 const SWIPE_THRESHOLD = 50; // 스와이프 인식을 위한 최소 이동 거리 (px)
 
@@ -91,7 +91,7 @@ const ImageModal = memo(
           <div className="flex items-center justify-center max-h-[75%]">
             <img
               ref={imageRef}
-              src={`/src/assets/photos/wedding_image${currentIndex + 1}.png`} // public 폴더의 이미지 경로
+              src={GALLERY_IMAGES[currentIndex]} // 임포트된 이미지 URL 사용
               alt={`결혼 이미지 ${currentIndex + 1}`}
               className="max-w-full max-h-full object-contain" // 이미지 크기 조절
               onLoad={handleImageLoad} // 이미지 로드 완료 시 너비 측정

@@ -1,20 +1,44 @@
+// src/constants/index.js
+
 // 환경 변수에서 카카오 API 키 가져오기
 export const KAKAO_API_KEY = import.meta.env.VITE_KAKAO_API_KEY;
 
 // 전체 웨딩 이미지 개수
 export const TOTAL_WEDDING_IMAGES = 24;
 
-// 이미지 경로 상수
+// 모든 이미지 파일들을 직접 임포트합니다.
+// 이제 모든 이미지는 src/assets/photos/ 폴더에 있다고 가정합니다.
+import CoverImage from "../assets/photos/title_image.png";
+import ParentsImage1 from "../assets/photos/parents_image1.png";
+import ChildrenImage1 from "../assets/photos/children_image1.png";
+import ParentsTextImage1 from "../assets/photos/parents_text_image1.png";
+import ParentsImage2 from "../assets/photos/parents_image2.png";
+import ChildrenImage2 from "../assets/photos/children_image2.png";
+import ParentsTextImage2 from "../assets/photos/parents_text_image2.png";
+import InvitationImage from "../assets/photos/invitation_image.png";
+
+const galleryContext = import.meta.glob("../assets/photos/wedding_image*.png", {
+  eager: true,
+});
+
+export const GALLERY_IMAGES = Array.from(
+  { length: TOTAL_WEDDING_IMAGES },
+  (_, i) => {
+    const imagePath = `/src/assets/photos/wedding_image${i + 1}.png`; // glob 경로에 맞춤
+    // Vite의 glob import는 객체 형태로 반환하며, 각 값은 기본적으로 { default: 이미지URL } 형태입니다.
+    return galleryContext[imagePath]?.default;
+  }
+).filter(Boolean); // 유효한 이미지만 필터링
+
 export const IMAGE_PATHS = {
-  // 모든 이미지 경로를 src/assets/photos/ 폴더 기준으로 변경
-  COVER: "/src/assets/photos/title_image.png",
-  PARENTS1: "/src/assets/photos/parents_image1.png",
-  CHILDREN1: "/src/assets/photos/children_image1.png",
-  PARENTS_TEXT1: "/src/assets/photos/parents_text_image1.png",
-  PARENTS2: "/src/assets/photos/parents_image2.png",
-  CHILDREN2: "/src/assets/photos/children_image2.png",
-  PARENTS_TEXT2: "/src/assets/photos/parents_text_image2.png",
-  INVITATION: "/src/assets/photos/invitation_image.png",
+  COVER: CoverImage,
+  PARENTS1: ParentsImage1,
+  CHILDREN1: ChildrenImage1,
+  PARENTS_TEXT1: ParentsTextImage1,
+  PARENTS2: ParentsImage2,
+  CHILDREN2: ChildrenImage2,
+  PARENTS_TEXT2: ParentsTextImage2,
+  INVITATION: InvitationImage,
 };
 
 // 외부 링크 URL 상수
