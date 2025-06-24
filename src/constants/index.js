@@ -16,6 +16,8 @@ import ParentsImage2 from "../assets/photos/parents_image2.png";
 import ChildrenImage2 from "../assets/photos/children_image2.png";
 import ParentsTextImage2 from "../assets/photos/parents_text_image2.png";
 import InvitationImage from "../assets/photos/invitation_image.png";
+import Name1 from "../assets/photos/name1.png";
+import Name2 from "../assets/photos/name2.png";
 
 const galleryContext = import.meta.glob("../assets/photos/wedding_image*.png", {
   eager: true,
@@ -39,6 +41,8 @@ export const IMAGE_PATHS = {
   CHILDREN2: ChildrenImage2,
   PARENTS_TEXT2: ParentsTextImage2,
   INVITATION: InvitationImage,
+  NAME1: Name1,
+  NAME2: Name2,
 };
 
 // 외부 링크 URL 상수

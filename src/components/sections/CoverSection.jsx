@@ -1,6 +1,4 @@
-import React from "react";
-import Name1 from "../../assets/name1.svg";
-import Name2 from "../../assets/name2.svg";
+import { React, useEffect } from "react";
 import Ampersand from "../../assets/ampersand.svg";
 
 import {
@@ -15,6 +13,18 @@ const CoverSection = () => {
   const [weddingInfoRef, isWeddingInfoVisible] = useInViewAnimation({
     threshold: 0.5,
   }); // 훅 사용
+
+  // // 사용자의 브라우저가 Safari이면, Name1과 Name2의 filter : blur(0px); feGaussianBlur의 값을 0으로 만들어 버린다.
+  useEffect(() => {
+    if (
+      navigator.userAgent.includes("Safari") &&
+      !navigator.userAgent.includes("Chrome")
+    ) {
+      document.querySelectorAll(".name-blur").forEach((el) => {
+        el.style.filter = "blur(0px)";
+      });
+    }
+  }, []);
 
   return (
     <section
@@ -51,9 +61,9 @@ const CoverSection = () => {
       {/* relative를 통해 자식 absolute 요소들의 기준점이 됩니다. */}
       <div className="flex-grow relative z-20 w-full">
         {/* Name1 (왼쪽 이름) */}
-        <iframe
+        <img
           type="image/svg+xml"
-          src={Name1}
+          src={IMAGE_PATHS.NAME1}
           className="absolute w-[27%] z-30"
           style={{
             // left: 중앙에서 왼쪽으로 이동 (+ 이름 자체 너비의 절반)
@@ -67,7 +77,7 @@ const CoverSection = () => {
             e.target.src =
               "https://placehold.co/400x100/cccccc/333333?text=Gijun+Name";
           }}
-        ></iframe>
+        ></img>
 
         {/* Ampersand (중앙 앰퍼샌드) */}
         <svg
@@ -90,9 +100,9 @@ const CoverSection = () => {
         </svg>
 
         {/* Name2 (오른쪽 이름) */}
-        <iframe
+        <img
           type="image/svg+xml"
-          src={Name2}
+          src={IMAGE_PATHS.NAME2}
           className="absolute w-[29%] z-30"
           style={{
             // left: 중앙에서 오른쪽으로 이동 (+ 이름 자체 너비의 절반)
@@ -108,7 +118,7 @@ const CoverSection = () => {
             e.target.src =
               "https://placehold.co/400x100/cccccc/333333?text=Daye+Name";
           }}
-        ></iframe>
+        ></img>
       </div>
 
       <div
