@@ -51,7 +51,7 @@ const CoverSection = () => {
       {/* relative를 통해 자식 absolute 요소들의 기준점이 됩니다. */}
       <div className="flex-grow relative z-20 w-full">
         {/* Name1 (왼쪽 이름) */}
-        <embed
+        <iframe
           type="image/svg+xml"
           src={Name1}
           className="absolute w-[27%] z-30"
@@ -67,7 +67,7 @@ const CoverSection = () => {
             e.target.src =
               "https://placehold.co/400x100/cccccc/333333?text=Gijun+Name";
           }}
-        ></embed>
+        ></iframe>
 
         {/* Ampersand (중앙 앰퍼샌드) */}
         <svg
@@ -90,7 +90,7 @@ const CoverSection = () => {
         </svg>
 
         {/* Name2 (오른쪽 이름) */}
-        <embed
+        <iframe
           type="image/svg+xml"
           src={Name2}
           className="absolute w-[29%] z-30"
@@ -108,7 +108,7 @@ const CoverSection = () => {
             e.target.src =
               "https://placehold.co/400x100/cccccc/333333?text=Daye+Name";
           }}
-        ></embed>
+        ></iframe>
       </div>
 
       <div
