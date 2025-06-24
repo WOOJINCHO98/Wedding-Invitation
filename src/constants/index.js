@@ -24,7 +24,7 @@ const galleryContext = import.meta.glob("../assets/photos/wedding_image*.png", {
 export const GALLERY_IMAGES = Array.from(
   { length: TOTAL_WEDDING_IMAGES },
   (_, i) => {
-    const imagePath = `/src/assets/photos/wedding_image${i + 1}.png`; // glob 경로에 맞춤
+    const imagePath = `../assets/photos/wedding_image${i + 1}.png`; // glob 경로에 맞춤
     // Vite의 glob import는 객체 형태로 반환하며, 각 값은 기본적으로 { default: 이미지URL } 형태입니다.
     return galleryContext[imagePath]?.default;
   }
