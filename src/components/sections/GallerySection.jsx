@@ -22,7 +22,7 @@ const GallerySection = ({ setCurrentImageIndex, setIsModalOpen }) => {
             }}
           >
             <img
-              src={`./wedding_image${index + 1}.png`}
+              src={`/src/assets/photos/wedding_image${index + 1}.png`}
               alt={`Wedding Moment ${index + 1}`}
               className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
               onError={(e) => {

@@ -6,14 +6,15 @@ export const TOTAL_WEDDING_IMAGES = 24;
 
 // 이미지 경로 상수
 export const IMAGE_PATHS = {
-  COVER: "./title_image.png",
-  PARENTS1: "./parents_image1.png",
-  CHILDREN1: "./children_image1.png",
-  PARENTS_TEXT1: "./parents_text_image1.png",
-  PARENTS2: "./parents_image2.png",
-  CHILDREN2: "./children_image2.png",
-  PARENTS_TEXT2: "./parents_text_image2.png",
-  INVITATION: "./invitation_image.png",
+  // 모든 이미지 경로를 src/assets/photos/ 폴더 기준으로 변경
+  COVER: "/src/assets/photos/title_image.png",
+  PARENTS1: "/src/assets/photos/parents_image1.png",
+  CHILDREN1: "/src/assets/photos/children_image1.png",
+  PARENTS_TEXT1: "/src/assets/photos/parents_text_image1.png",
+  PARENTS2: "/src/assets/photos/parents_image2.png",
+  CHILDREN2: "/src/assets/photos/children_image2.png",
+  PARENTS_TEXT2: "/src/assets/photos/parents_text_image2.png",
+  INVITATION: "/src/assets/photos/invitation_image.png",
 };
 
 // 외부 링크 URL 상수

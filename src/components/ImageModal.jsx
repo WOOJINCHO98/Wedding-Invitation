@@ -91,7 +91,7 @@ const ImageModal = memo(
           <div className="flex items-center justify-center max-h-[75%]">
             <img
               ref={imageRef}
-              src={`/wedding_image${currentIndex + 1}.png`} // public 폴더의 이미지 경로
+              src={`/src/assets/photos/wedding_image${currentIndex + 1}.png`} // public 폴더의 이미지 경로
               alt={`결혼 이미지 ${currentIndex + 1}`}
               className="max-w-full max-h-full object-contain" // 이미지 크기 조절
               onLoad={handleImageLoad} // 이미지 로드 완료 시 너비 측정
