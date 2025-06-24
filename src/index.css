@@ -47,19 +47,25 @@ body {
   }
 }
 
+
+@keyframes fadeInUp60 {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* 텍스트가 아래에서 위로 올라오도록 초기 위치 설정 */
+  }
+  to {
+    opacity: 0.6;
+    transform: translateY(0);
+  }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 1.6s ease-out forwards;
 }
 
-
-.text-animation {
-  opacity: 0; /* Initially hidden */
-  transform: translateY(20px); /* Initially moved down */
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition for non-animated state */
-}
-
-.text-animation.is-visible {
-  animation: fadeInUp 0.8s forwards; /* Apply animation when visible */
+.animate-fade-in-up-delay {
+  animation: fadeInUp60 1.6s ease-out forwards;
+  animation-delay: 0.8s;
 }
 
 /* Ampersand SVG에 적용될 애니메이션 */
