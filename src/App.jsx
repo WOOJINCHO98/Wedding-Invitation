@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./index.css";
 
 // 커스텀 훅 임포트
@@ -40,6 +40,13 @@ function App() {
     setCurrentQrImageSrc(qrPath);
     setIsQrModalOpen(true);
   };
+
+  // 우클릭 방지
+  useEffect(() => {
+    document.oncontextmenu = function () {
+      return false;
+    };
+  }, []);
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-zinc-800 p-0 sm:p-4 font-inter">

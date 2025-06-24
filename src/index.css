@@ -81,3 +81,20 @@ body {
     stroke-dashoffset: 0; /* 경로가 완전히 그려지도록 오프셋을 0으로 만듦 */
   }
 }
+
+body{
+  touch-action: pan-x;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-use-select: none;
+  user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
