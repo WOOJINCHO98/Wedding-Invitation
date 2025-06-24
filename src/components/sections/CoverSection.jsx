@@ -67,9 +67,7 @@ const CoverSection = () => {
             e.target.src =
               "https://placehold.co/400x100/cccccc/333333?text=Gijun+Name";
           }}
-        >
-          <img src={Name1} alt="Gijun" />
-        </object>
+        ></object>
 
         {/* Ampersand (중앙 앰퍼샌드) */}
         <svg
@@ -110,9 +108,7 @@ const CoverSection = () => {
             e.target.src =
               "https://placehold.co/400x100/cccccc/333333?text=Daye+Name";
           }}
-        >
-          <img src={Name2} alt="Daye" />
-        </object>
+        ></object>
       </div>
 
       <div
