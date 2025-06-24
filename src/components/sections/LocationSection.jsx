@@ -122,7 +122,7 @@ const LocationSection = ({ alertMessage }) => {
                 <p className="whitespace-nowrap">
                   내부 주차장 90분 | 외부주차장 150분 무료주차
                 </p>
-                <p className="whitespace-nowrap opacity-60">
+                <p className="text-[0.635rem] whitespace-nowrap opacity-60">
                   교통 및 주차가 혼잡할 수 있어 가급적 대중교통을 이용 바랍니다.
                 </p>
               </Fragment>
