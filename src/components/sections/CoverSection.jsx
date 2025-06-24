@@ -41,7 +41,7 @@ const CoverSection = () => {
       <div
         className="absolute inset-x-0 bottom-0 h-1/3 z-10"
         style={{
-          backgroundImage: `linear-gradient(to top, ${COLORS.DARK_GREEN}, rgba(19, 31, 5, 0.6), transparent)`,
+          backgroundImage: `linear-gradient(to top, ${COLORS.DARK_GREEN}, transparent)`,
         }}
       ></div>
 

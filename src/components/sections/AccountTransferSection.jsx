@@ -32,7 +32,7 @@ const AccountTransferSection = ({ alertMessage, onShowQrCode }) => {
 
   return (
     <section
-      className="w-full flex flex-col items-center p-2 scroll-snap-align-start flex-shrink-0 text-white"
+      className="w-full flex flex-col items-center p-3 scroll-snap-align-start flex-shrink-0 text-white"
       style={{ backgroundColor: COLORS.DARK_GREEN }}
     >
       {/* 첫 번째 애니메이션 그룹: SVG와 "마음 전하실 곳" */}
