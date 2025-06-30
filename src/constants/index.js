@@ -4,7 +4,7 @@
 export const KAKAO_API_KEY = import.meta.env.VITE_KAKAO_API_KEY;
 
 // 전체 웨딩 이미지 개수
-export const TOTAL_WEDDING_IMAGES = 24;
+export const TOTAL_WEDDING_IMAGES = 20;
 
 // 모든 이미지 파일들을 직접 임포트합니다.
 // 이제 모든 이미지는 src/assets/photos/ 폴더에 있다고 가정합니다.
